@@ -2,7 +2,6 @@ name: Daily Auto Commit
 
 on:
   schedule:
-    # Runs daily at 04:27 UTC (9:57 AM IST) to avoid server congestion
     - cron: '27 4 * * *'
   workflow_dispatch:
 
