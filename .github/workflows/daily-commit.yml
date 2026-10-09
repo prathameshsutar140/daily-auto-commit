@@ -2,7 +2,8 @@ name: Daily Auto Commit
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    # Runs daily at 04:27 UTC (9:57 AM IST) to avoid server congestion
+    - cron: '27 4 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,4 +27,3 @@ jobs:
           git add daily_log.txt
           git commit -m "chore: automated daily activity update" || exit 0
           git push
-          
